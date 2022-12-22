@@ -6,5 +6,6 @@ export default {
     red: '#f00',
     pink:'#FF0059',
     grey :'#d3d3d3',
+    darkcyan:'#008b8b'
 
 }

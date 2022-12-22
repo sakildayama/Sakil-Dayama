@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
-const Input = ({style,label,keyBoardType,value,placeholder,errors,
+const Input = ({style,label,keyBoardType,value,placeholder,error,
   onChange = () => { },
 }) => {
   return (
@@ -13,7 +13,7 @@ const Input = ({style,label,keyBoardType,value,placeholder,errors,
       placeholder={placeholder}
       keyboardType={keyBoardType}        
       />
-      <Text style={{color:"red",fontSize:14,}} >{errors}</Text>
+      <Text style={{color:"red",fontSize:14,}} >{error}</Text>
     </View>
   )
 }

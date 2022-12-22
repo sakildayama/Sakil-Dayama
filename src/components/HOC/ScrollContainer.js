@@ -14,7 +14,9 @@ const ScrollContainer = ({
         <ViewContainer useSafeArea={useSafeArea} backgroundColor={backgroundColor} style={style}>
             <ScrollView
                 showsVerticalScrollIndicator={showsVerticalScrollIndicator}
-                style={[containerStyle.container(backgroundColor), styles.scroll]}>
+                style={[
+                    // containerStyle.container(backgroundColor),            puchna error  // bunty
+                     styles.scroll]}>
                 {children}
             </ScrollView>
         </ViewContainer>

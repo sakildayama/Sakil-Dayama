@@ -18,7 +18,7 @@ const StackNavigator = () => {
             screenOptions={{
                 // your stack style
             }}
-            initialRouteName="Home"
+            initialRouteName="Loginr"
         >
             <Screen   name='Wellcome'
                 // use getComponent instead of component for better speed 

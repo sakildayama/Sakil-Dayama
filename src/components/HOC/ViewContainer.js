@@ -2,6 +2,7 @@ import { SafeAreaView, View } from 'react-native';
 import React from 'react';
 import Container from './Container';
 import colors from '../../constants/colors';
+import globalStyle from '../../constants/globalStyle'
 
 const ViewContainer = ({
     children,
@@ -16,7 +17,8 @@ const ViewContainer = ({
                     ? <SafeAreaView style={[globalStyle.container(backgroundColor), style]}>
                         {children}
                     </SafeAreaView>
-                    : <View style={[globalStyle.container(backgroundColor), style]}>
+                    : <View 
+                    style={[globalStyle, style]}>
                         {children}
                     </View>
             }

@@ -59,6 +59,7 @@ const printAPIDetails = (token, url, body) => {
 export const POST = async (
     route,
     body = {},
+    headers={},
     onSuccess = () => { },
     onError = () => { },
     onFail = () => {
@@ -67,10 +68,11 @@ export const POST = async (
 ) => {
     try {
         printAPIDetails('NO TOKEN', route, body);
-        const res = await fetch(API + route, {
+        const res = await fetch(route, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                ...headers
             },
             body: JSON.stringify(body),
         });
@@ -83,7 +85,7 @@ export const POST = async (
         }
         const resJSON = await res.json();
         // print(resJSON)
-        if (resJSON.status === 'success') {
+        if (resJSON.ok == true) {
             onSuccess(resJSON);
             return {
                 ...resJSON,

@@ -5,5 +5,6 @@ export default {
   facebook:require('../assest/Images/facebook.png'),
    google:require('../assest/Images/google.png'),
    deliveryboy:require('../assest/Images/deliveryboy.png'),
+   deleverymainww:require('../assest/Images/deleverymainww.png'),
 
 }

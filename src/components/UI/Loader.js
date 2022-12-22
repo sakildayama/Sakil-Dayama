@@ -1,13 +1,13 @@
 import { StyleSheet, ActivityIndicator } from 'react-native';
 import React, { memo } from 'react';
 import colors from '../../constants/colors';
-
+import ViewContainer from '../HOC/ViewContainer'
 const Loader = ({ loading = false }) => {
     return (
-        <View
+        <ViewContainer
             style={[styles.loader]}>
             {loading && <ActivityIndicator size={'large'} color={colors.white} />}
-        </View>
+        </ViewContainer>
     );
 };
 
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.black + '70',
+        // backgroundColor: colors.black + '70',
         ...StyleSheet.absoluteFillObject
     },
 });
